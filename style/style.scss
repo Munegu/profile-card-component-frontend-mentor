@@ -1,9 +1,18 @@
 $mobile: 375px;
 $desktop: 1440px;
 
-body {
-  background-color: hsl(185, 75%, 39%);
+:root{
   font-size: 18px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
   font-family: 'Kumbh Sans', sans-serif;
-  overflow: hidden;
+  color: hsl(0,11%,12%);
 }

@@ -1,8 +1,16 @@
-body {
-  background-color: #19a2ae;
+:root {
   font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Kumbh Sans", sans-serif;
-  overflow: hidden;
+  color: #221b1b;
 }
 
 /*# sourceMappingURL=style.css.map */
