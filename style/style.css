@@ -20,6 +20,7 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .card {
@@ -28,6 +29,7 @@ section {
   background: white;
   overflow: hidden;
   text-align: center;
+  position: relative;
 }
 
 .card-header {
@@ -94,6 +96,18 @@ section {
 .card-footer .item .meta {
   font-size: 0.6rem;
   letter-spacing: 1px;
+}
+
+.circles .c1, .circles .c2 {
+  position: absolute;
+}
+.circles .c1 {
+  top: -300px;
+  left: -275px;
+}
+.circles .c2 {
+  bottom: -300px;
+  right: -275px;
 }
 
 /*# sourceMappingURL=style.css.map */
