@@ -5,22 +5,22 @@ $veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
 $darkGrayishBlue: hsl(227, 10%, 46%);
 $darkGray: hsl(0, 0%, 59%);
 
-:root{
+:root {
   font-size: 18px;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'Kumbh Sans', sans-serif;
-  color: hsl(0,11%,12%);
+  color: hsl(0, 11%, 12%);
 }
 
-section{
+section {
   background-color: $darkCyan;
   height: 100vh;
   display: flex;
@@ -30,7 +30,7 @@ section{
   overflow: hidden;
 }
 
-.card{
+.card {
   width: 350px;
   border-radius: 20px;
   background: white;
@@ -39,17 +39,17 @@ section{
   position: relative;
 }
 
-.card-header{
+.card-header {
   background-image: url("../images/bg-pattern-card.svg");
   background-size: cover;
   height: 150px;
 }
 
-.card-body{
+.card-body {
   padding: 0 20px 25px;
 }
 
-.img-holder{
+.img-holder {
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -57,71 +57,110 @@ section{
   overflow: hidden;
   margin: -65px auto 30px auto;
 
-    & img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+  & img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 
-.name-age{
+.name-age {
   font-size: 1.1rem;
   margin-bottom: 12px;
 }
 
-.age{
+.age {
   margin-left: 6px;
 }
 
-.city{
+.city {
   font-size: .9rem;
 }
 
 .age,
 .city,
-.meta{
+.meta {
   font-weight: 400;
   color: $darkGray;
 }
 
-.card-footer{
+.card-footer {
   border-top: 1px solid $darkGray;
   display: flex;
   padding: 0 25px;
 
-    & .item{
-      flex: 1;
-      height: 100px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+  & .item {
+    flex: 1;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-        & .value{
-          font-size: 1.1rem;
-          margin-bottom: 6px;
-        }
-
-        & .meta{
-          font-size: .6rem;
-          letter-spacing: 1px;
-        }
+    & .value {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
     }
+
+    & .meta {
+      font-size: .6rem;
+      letter-spacing: 1px;
+    }
+  }
 }
 
-.circles{
+.circles {
 
-    & .c1, .c2 {
-      position: absolute;
-    }
+  & .c1, .c2 {
+    position: absolute;
+    animation: 2s circles forwards;
+    opacity: 0;
+  }
 
-    & .c1 {
-      top: -300px;
-      left: -275px;
-    }
+  & .c1 {
+    top: -300px;
+    left: -175px;
+    transform: translate(-100px, -50px);
+  }
 
-    & .c2 {
-      bottom: -300px;
-      right: -275px;
-    }
+  & .c2 {
+    bottom: -300px;
+    right: -175px;
+    transform: translate(100px, 50px);
+  }
+}
+
+@keyframes circles {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.attribution{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: .4s;
+  padding: 20px;
+  background: white;
+  text-align: center;
+
+  &:hover{
+    transform: translateY(0);
+  }
+
+  &:before{
+    content: '';
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+  }
 }
